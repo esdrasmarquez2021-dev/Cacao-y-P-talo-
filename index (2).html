@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cacao & Pétalo | Chocolates Importados y Arreglos Florales en Honduras</title>
+  <meta name="description" content="Regala una emoción, entrega un recuerdo. Chocolates finos importados y arreglos florales frescos en Tegucigalpa y San Pedro Sula, Honduras." />
+  
+  <!-- Google Fonts: Cormorant Garamond (Editorial/Lujo) + Plus Jakarta Sans (UI Limpia y Moderna) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. VARIABLES & DESIGN SYSTEM (Paleta Sobria: Cacao, Crema, Terracota/Rosa y Salvia)
+       ========================================================================== */
+    :root {
+      --bg-primary: #FAF7F4;
+      --bg-secondary: #F3ECE4;
+      --surface: #FFFFFF;
+      --cacao-900: #241511;
+      --cacao-800: #38221C;
+      --cacao-600: #5E3C33;
+      --cacao-400: #8C6A60;
+      --accent-rose: #A64B58;
+      --accent-rose-hover: #8C3B47;
+      --accent-rose-light: #F9EBEE;
+      --accent-gold: #C59B5F;
+      --accent-sage: #2E6F56;
+      --accent-sage-light: #E8F3EE;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1EBE5D;
+      --border: #E6DDD4;
+      --shadow-sm: 0 4px 14px rgba(36, 21, 17, 0.05);
+      --shadow-md: 0 12px 28px rgba(36, 21, 17, 0.08);
+      --shadow-lg: 0 20px 44px rgba(36, 21, 17, 0.14);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.28s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--cacao-900);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .font-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      line-height: 1.15;
+      color: var(--cacao-900);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ==========================================================================
+       3. TOP BAR & STICKY NAVIGATION
+       ========================================================================== */
+    .announcement-bar {
+      background-color: var(--cacao-900);
+      color: #F7EFE8;
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .announcement-bar span {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    header.navbar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(250, 247, 244, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cacao-800), var(--accent-rose));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--cacao-400);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--cacao-600);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--cacao-900);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-rose);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .cart-trigger {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--cacao-900);
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .cart-trigger:hover {
+      border-color: var(--cacao-800);
+      transform: translateY(-1px);
+    }
+
+    .cart-badge {
+      background: var(--accent-rose);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .cart-badge.bump {
+      transform: scale(1.3);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.65rem;
+      font-size: 1.25rem;
+      color: var(--cacao-900);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       4. BUTTONS & MICRO-INTERACTIONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background-color: var(--cacao-900);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(36, 21, 17, 0.2);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-rose);
+      box-shadow: 0 10px 24px rgba(166, 75, 88, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--surface);
+      color: var(--cacao-900);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-secondary);
+      border-color: var(--cacao-400);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp);
+      color: #0D331B;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--whatsapp-dark);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       5. HERO SECTION (HOME)
+       ========================================================================== */
+    .hero {
+      padding: 3.5rem 0 4.5rem;
+      background: radial-gradient(circle at 85% 20%, #F2E4DF 0%, transparent 45%),
+                  radial-gradient(circle at 10% 80%, #EFE6DC 0%, transparent 40%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--accent-rose-light);
+      color: var(--accent-rose);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 4.8vw, 3.85rem);
+      font-weight: 700;
+      margin-bottom: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      color: var(--accent-rose);
+      font-style: italic;
+    }
+
+    .hero-lead {
+      font-size: 1.1rem;
+      color: var(--cacao-600);
+      max-width: 540px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.86rem;
+      color: var(--cacao-600);
+    }
+
+    .hero-trust-strip div {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-img-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 4.4;
+      background: var(--bg-secondary);
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .hero-img-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: 22px;
+      left: -20px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      max-width: 260px;
+    }
+
+    .hero-floating-badge strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--cacao-900);
+    }
+
+    .hero-floating-badge span {
+      font-size: 0.8rem;
+      color: var(--cacao-600);
+    }
+
+    /* ==========================================================================
+       6. BENEFICIOS & GARANTIAS (VALUE PROPOSITION)
+       ========================================================================== */
+    .section {
+      padding: 4.5rem 0;
+    }
+
+    .section-alt {
+      background-color: var(--bg-secondary);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--cacao-600);
+      font-size: 1.02rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .benefit-card {
+      background: var(--surface);
+      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--bg-secondary);
+      color: var(--accent-rose);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .benefit-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-card p {
+      font-size: 0.9rem;
+      color: var(--cacao-600);
+    }
+
+    /* ==========================================================================
+       7. PRODUCT CARDS & CATALOG CONTROLS
+       ========================================================================== */
+    .catalog-toolbar {
+      background: var(--surface);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .control-group label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--cacao-400);
+    }
+
+    .control-input {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-primary);
+      color: var(--cacao-900);
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .control-input:focus {
+      outline: none;
+      border-color: var(--accent-rose);
+      background: var(--surface);
+    }
+
+    .catalog-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .results-count {
+      font-size: 0.92rem;
+      color: var(--cacao-600);
+      font-weight: 500;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: #D8CBBF;
+    }
+
+    .product-media {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--bg-secondary);
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+
+    .product-card:hover .product-media img {
+      transform: scale(1.06);
+    }
+
+    .badge-stack {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+      backdrop-filter: blur(6px);
+    }
+
+    .badge-available {
+      background: rgba(232, 243, 238, 0.95);
+      color: var(--accent-sage);
+    }
+
+    .badge-imported {
+      background: rgba(36, 21, 17, 0.88);
+      color: #F7EFE8;
+    }
+
+    .badge-code {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--cacao-600);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+    }
+
+    .product-body {
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-brand {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-rose);
+      margin-bottom: 0.25rem;
+    }
+
+    .product-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cacao-900);
+      margin-bottom: 0.45rem;
+    }
+
+    .product-desc {
+      font-size: 0.88rem;
+      color: var(--cacao-600);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--cacao-900);
+    }
+
+    .product-price small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--cacao-400);
+    }
+
+    .btn-add {
+      background: var(--cacao-900);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.05rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-add:hover {
+      background: var(--accent-rose);
+    }
+
+    .btn-add.added {
+      background: var(--accent-sage);
+    }
+
+    /* ==========================================================================
+       8. QUIÉNES SOMOS (HISTORIA, IMPORTACIÓN, TRANSPARENCIA & TESTIMONIOS)
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .about-image-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-image-wrap img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .about-content h2 {
+      font-size: clamp(2rem, 3.5vw, 2.65rem);
+      margin-bottom: 1rem;
+    }
+
+    .about-content p {
+      color: var(--cacao-600);
+      margin-bottom: 1.1rem;
+    }
+
+    .pillars-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .pillar-item {
+      background: var(--surface);
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .pillar-item strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--cacao-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .pillar-item span {
+      font-size: 0.83rem;
+      color: var(--cacao-600);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      padding: 1.6rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card p {
+      font-size: 0.92rem;
+      color: var(--cacao-600);
+      font-style: italic;
+      margin-bottom: 1.1rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.84rem;
+    }
+
+    .testimonial-author strong {
+      color: var(--cacao-900);
+    }
+
+    .verified-tag {
+      color: var(--accent-sage);
+      font-weight: 600;
+      font-size: 0.76rem;
+    }
+
+    /* ==========================================================================
+       9. CONTÁCTANOS
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: var(--cacao-900);
+      color: #F7EFE8;
+      padding: 2.25rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-info-card h2 {
+      color: #fff;
+      font-size: 2.15rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-info-card > p {
+      color: #D7C8BE;
+      margin-bottom: 1.75rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-details {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.92rem;
+    }
+
+    .contact-details strong {
+      display: block;
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .quick-contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-form-card {
+      background: var(--surface);
+      padding: 2.25rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group {
+      margin-bottom: 1.15rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--cacao-800);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-primary);
+      font-size: 0.94rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-rose);
+      background: #fff;
+    }
+
+    /* ==========================================================================
+       10. DRAWER DEL CARRITO (OFF-CANVAS CHECKOUT WHATSAPP)
+       ========================================================================== */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(36, 21, 17, 0.5);
+      backdrop-filter: blur(3px);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 440px;
+      height: 100dvh;
+      background: var(--surface);
+      z-index: 1001;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.18);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .cart-header {
+      padding: 1.35rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-primary);
+    }
+
+    .cart-header h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .close-cart {
+      background: none;
+      border: 1px solid var(--border);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      color: var(--cacao-900);
+      transition: var(--transition);
+    }
+
+    .close-cart:hover {
+      background: var(--cacao-900);
+      color: #fff;
+    }
+
+    .cart-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--cacao-600);
+    }
+
+    .cart-empty-icon {
+      font-size: 2.75rem;
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 0.9rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+
+    .cart-item img {
+      width: 68px;
+      height: 68px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .cart-item-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cart-item-brand {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--accent-rose);
+      font-weight: 700;
+    }
+
+    .cart-item-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--cacao-900);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cart-item-price {
+      font-size: 0.85rem;
+      color: var(--cacao-600);
+      margin-bottom: 0.45rem;
+    }
+
+    .qty-controls {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      background: var(--bg-primary);
+      border: none;
+      width: 26px;
+      height: 26px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--cacao-900);
+    }
+
+    .qty-btn:hover {
+      background: var(--bg-secondary);
+    }
+
+    .qty-val {
+      padding: 0 0.65rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .remove-item {
+      background: none;
+      border: none;
+      color: var(--cacao-400);
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .remove-item:hover {
+      color: var(--accent-rose);
+    }
+
+    .cart-footer {
+      padding: 1.35rem 1.5rem;
+      border-top: 1px solid var(--border);
+      background: var(--bg-primary);
+    }
+
+    .cart-note-box {
+      margin-bottom: 1rem;
+    }
+
+    .cart-note-box label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--cacao-600);
+      margin-bottom: 0.3rem;
+    }
+
+    .cart-note-input {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      background: #fff;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      color: var(--cacao-600);
+      margin-bottom: 0.4rem;
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--cacao-900);
+      padding-top: 0.65rem;
+      margin-top: 0.5rem;
+      border-top: 1px dashed var(--border);
+      margin-bottom: 1rem;
+    }
+
+    .checkout-disclaimer {
+      font-size: 0.76rem;
+      color: var(--cacao-600);
+      text-align: center;
+      margin-top: 0.65rem;
+    }
+
+    /* ==========================================================================
+       11. TOAST NOTIFICATION & FOOTER
+       ========================================================================== */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--cacao-900);
+      color: #fff;
+      padding: 0.75rem 1.35rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      z-index: 1200;
+      opacity: 0;
+      transition: all 0.32s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    footer {
+      background: var(--cacao-900);
+      color: #D7C8BE;
+      padding: 3.5rem 0 1.75rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+
+    footer h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #fff;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    footer a:hover {
+      color: var(--accent-gold);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: #A69387;
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+      }
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .products-grid, .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .catalog-toolbar {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-floating-badge {
+        left: 16px;
+        bottom: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        display: none;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: inline-block;
+      }
+      .benefits-grid, .products-grid, .testimonials-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .catalog-toolbar {
+        grid-template-columns: 1fr;
+      }
+      .pillars-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de anuncio superior -->
+  <div class="announcement-bar">
+    Entregas programadas el mismo día en <span>Tegucigalpa</span> y <span>San Pedro Sula</span> · Cotización directa por WhatsApp
+  </div>
+
+  <!-- Navegación Principal -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="Cacao & Pétalo Inicio">
+        <div class="brand-icon">C&amp;P</div>
+        <div class="brand-text">
+          <span class="brand-name">Cacao &amp; Pétalo</span>
+          <span class="brand-sub">Honduras · Boutique de Regalos</span>
+        </div>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+          <li><a href="#destacados" onclick="closeMobileMenu()">Destacados</a></li>
+          <li><a href="#catalogo" onclick="closeMobileMenu()">Catálogo / Tienda</a></li>
+          <li><a href="#quienes-somos" onclick="closeMobileMenu()">Quiénes Somos</a></li>
+          <li><a href="#contactanos" onclick="closeMobileMenu()">Contáctanos</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-trigger" id="openCartBtn" aria-label="Abrir carrito de compras">
+          <span>🛍️ Carrito</span>
+          <span class="cart-badge" id="navCartCount">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú móvil">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         SECCIÓN 1: HOME (HERO + PROPUESTA DE VALOR + BENEFICIOS + DESTACADOS)
+         ====================================================================== -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✨ Regala una emoción, entrega un recuerdo</div>
+          <h1>Chocolates que endulzan el momento y <em>flores que hablan por ti</em>.</h1>
+          <p class="hero-lead">
+            Selección curada de chocolatería fina importada y arreglos florales frescos diseñados para celebrar cumpleaños, aniversarios y gestos espontáneos en Honduras.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#catalogo" class="btn btn-primary">Ver catálogo completo →</a>
+            <a href="#destacados" class="btn btn-secondary">Explorar favoritos</a>
+          </div>
+          <div class="hero-trust-strip">
+            <div><span>✓</span> Precios claros en Lempiras (L)</div>
+            <div><span>✓</span> Tarjeta dedicatoria incluida</div>
+            <div><span>✓</span> Confirmación inmediata por WhatsApp</div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-card">
+            <img 
+              src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=900&q=80" 
+              alt="Caja de bombones finos de chocolate acompañados de flores frescas" 
+              loading="eager"
+            />
+          </div>
+          <div class="hero-floating-badge">
+            <strong>Atención Humana y Personalizada</strong>
+            <span>Arma tu selección en la web y valida disponibilidad y entrega directo con un asesor.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios / Garantías / Por qué comprar con nosotros -->
+    <section class="section section-alt" aria-label="Nuestras garantías">
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Por qué elegir Cacao &amp; Pétalo?</h2>
+          <p>Sabemos que cada regalo lleva una intención emocional. Cuidamos cada detalle desde la selección hasta la entrega en puerta.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">🍫</div>
+            <h3>Importación Certificada</h3>
+            <p>Chocolates europeos y americanos conservados bajo cadena de temperatura controlada para preservar su textura y brillo original.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">💐</div>
+            <h3>Flores Cortadas del Día</h3>
+            <p>Trabajamos con floricultores seleccionados para garantizar pétalos firmes, aroma natural y arreglos fieles a las fotografías.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <h3>Transparencia Total</h3>
+            <p>Sin cobros ocultos. Confirmas disponibilidad, dedicatoria, método de pago y ventana exacta de entrega antes de concretar.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🚚</div>
+            <h3>Entrega Cuidada en Ruta</h3>
+            <p>Envíos climatizados en Tegucigalpa y San Pedro Sula con aviso fotográfico al momento de entregar tu sorpresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chocolates y Arreglos Destacados -->
+    <section id="destacados" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Favoritos de la Temporada</h2>
+          <p>Las combinaciones y detalles más solicitados para aniversarios, cumpleaños y agradecimientos.</p>
+        </div>
+
+        <div class="products-grid" id="featuredGrid">
+          <!-- Renderizado dinámico por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 2: CATÁLOGO / TIENDA (FILTROS, BUSCADOR Y COTIZACIÓN WHATSAPP)
+         ====================================================================== -->
+    <section id="catalogo" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Catálogo &amp; Tienda en Línea</h2>
+          <p>Filtra por categoría, marca o presupuesto en Lempiras. Agrega tus favoritos al carrito para solicitar cotización y reserva en un clic.</p>
+        </div>
+
+        <!-- Barra de búsqueda y filtros -->
+        <div class="catalog-toolbar" role="region" aria-label="Filtros del catálogo">
+          <div class="control-group">
+            <label for="searchInput">Buscar producto o marca</label>
+            <input 
+              type="search" 
+              id="searchInput" 
+              class="control-input" 
+              placeholder="Ej. Ferrero, Lindt, Rosas, Dúo..."
+            />
+          </div>
+
+          <div class="control-group">
+            <label for="categoryFilter">Categoría</label>
+            <select id="categoryFilter" class="control-input">
+              <option value="all">Todas las categorías</option>
+              <option value="Chocolates">Chocolates Importados</option>
+              <option value="Arreglos Florales">Arreglos Florales</option>
+              <option value="Dúos Regalo">Dúos (Flores + Chocolates)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="brandFilter">Marca / Colección</label>
+            <select id="brandFilter" class="control-input">
+              <option value="all">Todas las marcas</option>
+              <!-- Opciones pobladas dinámicamente -->
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="priceFilter">Rango de Precio (L)</label>
+            <select id="priceFilter" class="control-input">
+              <option value="all">Cualquier presupuesto</option>
+              <option value="0-750">Hasta L 750</option>
+              <option value="751-1400">L 751 – L 1,400</option>
+              <option value="1401-99999">Más de L 1,400</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-meta-bar">
+          <span class="results-count" id="resultsCount">Mostrando todos los productos</span>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <button type="button" class="btn btn-secondary" id="resetFiltersBtn" style="padding: 0.55rem 1.1rem; font-size:0.85rem;">
+              Limpiar filtros
+            </button>
+            <a 
+              href="https://wa.me/50433902792?text=Hola%20%F0%9F%98%8A%20Estoy%20revisando%20su%20cat%C3%A1logo%20web%20de%20chocolates%20y%20arreglos%20florales%20y%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20personalizada." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-whatsapp"
+              style="padding: 0.55rem 1.15rem; font-size:0.85rem;"
+            >
+              💬 Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid Principal de Productos -->
+        <div class="products-grid" id="catalogGrid">
+          <!-- Renderizado dinámico por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 3: QUIÉNES SOMOS (HISTORIA, IMPORTACIÓN, RESPALDO & TESTIMONIOS)
+         ====================================================================== -->
+    <section id="quienes-somos" class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=900&q=80" 
+              alt="Taller floral y selección artesanal de regalos en Honduras" 
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-content">
+            <div class="eyebrow">Nuestra Esencia</div>
+            <h2>Nacimos para hacer fácil el arte de regalar bien en Honduras.</h2>
+            <p>
+              <strong>Cacao &amp; Pétalo</strong> surgió al identificar una necesidad clara entre quienes desean sorprender a alguien especial en Tegucigalpa y San Pedro Sula: encontrar chocolatería importada auténtica y arreglos florales de diseño sin incertidumbre sobre la calidad o la puntualidad.
+            </p>
+            <p>
+              Gestionamos lotes pequeños de importación directa desde Suiza, Bélgica e Italia, combinándolos en nuestro estudio floral con tallos frescos seleccionados cada mañana.
+            </p>
+
+            <div class="pillars-list">
+              <div class="pillar-item">
+                <strong>❄️ Cadena de Frío Real</strong>
+                <span>Almacenamiento climatizado a 18 °C para evitar fatiga térmica en el cacao.</span>
+              </div>
+              <div class="pillar-item">
+                <strong>📸 Lo que ves es lo que llega</strong>
+                <span>Fotografías reales de nuestros arreglos y confirmación previa al despacho.</span>
+              </div>
+              <div class="pillar-item">
+                <strong>🔒 Privacidad y Respeto</strong>
+                <span>Tus datos y mensajes de tarjeta se manejan con estricta confidencialidad.</span>
+              </div>
+              <div class="pillar-item">
+                <strong>🤝 Respaldo Garantizado</strong>
+                <span>Si un producto presenta algún inconveniente en ruta, lo reponemos sin costo.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonios Simulados Verificables -->
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <h3 style="font-size: 2rem;">Experiencias de Clientes en Honduras</h3>
+          <p>Historias reales de quienes confiaron sus celebraciones a nuestro equipo.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <p>“Pedí el Dúo Rosas &amp; Ferrero para el aniversario de mis papás en Tegucigalpa. Me escribieron por WhatsApp en minutos, confirmaron la tarjeta y llegó puntualísimo.”</p>
+            <div class="testimonial-author">
+              <strong>Valeria Mendoza · Tegucigalpa</strong>
+              <span class="verified-tag">✓ Compra verificada</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <p>“Los bombones Lindt venían impecables, nada derretidos a pesar del calor en San Pedro Sula. La presentación de la caja y las flores súper elegante.”</p>
+            <div class="testimonial-author">
+              <strong>Carlos Mejía · San Pedro Sula</strong>
+              <span class="verified-tag">✓ Compra verificada</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <p>“Me encantó poder armar mi carrito en la página con los precios claros en Lempiras y pasar directo a WhatsApp sin llenar formularios eternos.”</p>
+            <div class="testimonial-author">
+              <strong>Andrea Castillo · Tegucigalpa</strong>
+              <span class="verified-tag">✓ Compra verificada</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 4: CONTÁCTANOS (DATOS, BOTONES RÁPIDOS Y FORMULARIO)
+         ====================================================================== -->
+    <section id="contactanos" class="section section-alt">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h2>Hablemos de tu próximo detalle</h2>
+            <p>¿Buscas un arreglo personalizado, regalos corporativos o tienes dudas sobre cobertura de entrega? Escríbenos directamente.</p>
+
+            <ul class="contact-details">
+              <li>
+                <span>📍</span>
+                <div>
+                  <strong>Cobertura Urbana</strong>
+                  Tegucigalpa (Col. Palmira, Lomas del Guijarro, El Hatillo y alrededores) y San Pedro Sula (Zona Viva, Río de Piedras, Jardines del Valle).
+                </div>
+              </li>
+              <li>
+                <span>🕒</span>
+                <div>
+                  <strong>Horario de Atención &amp; Despacho</strong>
+                  Lunes a Sábado: 8:00 a.m. – 7:00 p.m. | Domingos: Entregas programadas con 24h de anticipación.
+                </div>
+              </li>
+              <li>
+                <span>📱</span>
+                <div>
+                  <strong>WhatsApp Directo</strong>
+                  +504 3390-2792
+                </div>
+              </li>
+            </ul>
+
+            <div class="quick-contact-buttons">
+              <a 
+                href="https://wa.me/50433902792?text=Hola%20%F0%9F%98%8A%20Me%20gustar%C3%ADa%20cotizar%20un%20arreglo%20floral%20o%20caja%20de%20chocolates%20personalizados%20que%20vi%20en%20su%20web." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-whatsapp"
+              >
+                💬 Escribir por WhatsApp ahora
+              </a>
+              <a href="tel:+50433902792" class="btn btn-secondary" style="background: rgba(255,255,255,0.1); color:#fff; border-color: rgba(255,255,255,0.2);">
+                📞 Llamar al +504 3390-2792
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.75rem; margin-bottom: 0.4rem;">Envíanos una consulta rápida</h3>
+            <p style="font-size: 0.9rem; color: var(--cacao-600); margin-bottom: 1.5rem;">
+              Completa tus datos y prepararemos tu mensaje listo para enviarlo a nuestro WhatsApp comercial.
+            </p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Tu nombre *</label>
+                <input type="text" id="contactName" class="form-control" required placeholder="Ej. Sofía Hernández" />
+              </div>
+
+              <div class="form-group">
+                <label for="contactCity">Ciudad de entrega *</label>
+                <select id="contactCity" class="form-control" required>
+                  <option value="Tegucigalpa">Tegucigalpa</option>
+                  <option value="San Pedro Sula">San Pedro Sula</option>
+                  <option value="Otra ciudad (Consultar envío)">Otra ciudad (Consultar envío)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactOccasion">Ocasión del regalo</label>
+                <select id="contactOccasion" class="form-control">
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Aniversario / Romántico">Aniversario / Romántico</option>
+                  <option value="Graduación / Logro">Graduación / Logro</option>
+                  <option value="Agradecimiento / Corporativo">Agradecimiento / Corporativo</option>
+                  <option value="Detalle espontáneo">Detalle espontáneo</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">¿Qué te gustaría cotizar? *</label>
+                <textarea id="contactMessage" rows="3" class="form-control" required placeholder="Cuéntanos si prefieres tonos de flores específicos, chocolates sin azúcar o fecha deseada..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Enviar consulta por WhatsApp →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Cacao &amp; Pétalo</div>
+          <p style="max-width: 340px; line-height: 1.65;">
+            Chocolates que endulzan el momento y flores que hablan por ti. Boutique digital de regalos en Honduras con atención personalizada.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#destacados">Destacados</a></li>
+            <li><a href="#catalogo">Catálogo / Tienda</a></li>
+            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+            <li><a href="#contactanos">Contáctanos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Atención al Cliente</h4>
+          <ul>
+            <li>WhatsApp: +504 3390-2792</li>
+            <li>Tegucigalpa &amp; San Pedro Sula, HN</li>
+            <li>Pagos vía Transferencia BAC / Ficohsa / Atlántida y Efectivo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Cacao &amp; Pétalo Honduras. Todos los derechos reservados.</span>
+        <span>Precios expresados en Lempiras (HNL) · Imágenes ilustrativas fieles a nuestra línea de diseño.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CARRITO LATERAL (DRAWER) + CHECKOUT POR WHATSAPP
+       ======================================================================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Tu Selección</h3>
+      <button class="close-cart" id="closeCartBtn" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer">
+      <!-- Renderizado dinámico de ítems del carrito -->
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-note-box">
+        <label for="cardDeduction">Mensaje breve para tarjeta dedicatoria (opcional):</label>
+        <input 
+          type="text" 
+          id="cardDeduction" 
+          class="cart-note-input" 
+          placeholder="Ej. ¡Feliz cumpleaños! Con mucho cariño..."
+        />
+      </div>
+
+      <div class="summary-row">
+        <span>Subtotal artículos</span>
+        <span id="cartSubtotal">L 0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Envío urbano (TGU / SPS)</span>
+        <span>A confirmar en chat</span>
+      </div>
+      <div class="summary-total">
+        <span>Total Referencial</span>
+        <span id="cartTotal">L 0.00</span>
+      </div>
+
+      <button type="button" class="btn btn-whatsapp" id="checkoutWhatsappBtn" style="width: 100%; font-size: 1rem;">
+        💬 Finalizar pedido por WhatsApp
+      </button>
+      <p class="checkout-disclaimer">
+        No se realiza cobro automático. Se abrirá WhatsApp (+504 3390-2792) con el resumen completo de tu pedido para confirmar disponibilidad y entrega.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Toast de confirmación visual -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       JAVASCRIPT: CATÁLOGO, FILTROS, LOCALSTORAGE CART Y WHATSAPP CHECKOUT
+       ======================================================================== -->
+  <script>
+    // 1. CONFIGURACIÓN GENERAL
+    const WHATSAPP_NUMBER = '50433902792';
+    const STORAGE_KEY = 'cacao_petalo_cart_v1';
+
+    // 2. BASE DE DATOS DE PRODUCTOS (Chocolates Importados, Arreglos Florales y Dúos)
+    const PRODUCTS = [
+      {
+        id: 'CH-101',
+        name: 'Cofre Ferrero Rocher Collection (24 pzas)',
+        brand: 'Ferrero Rocher',
+        category: 'Chocolates',
+        price: 680,
+        featured: true,
+        imported: true,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=800&q=80',
+        description: 'Surtido dorado de avellanas enteras tostadas bañadas en chocolate con leche y crujiente barquillo.'
+      },
+      {
+        id: 'FL-201',
+        name: 'Bouquet Imperial 24 Rosas Rojas',
+        brand: 'Atelier Floral',
+        category: 'Arreglos Florales',
+        price: 1250,
+        featured: true,
+        imported: false,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80',
+        description: 'Rosas de tallo largo frescas del día envueltas en papel coreano mate con lazo de seda y tarjeta.'
+      },
+      {
+        id: 'DU-301',
+        name: 'Dúo Encanto: Lindt Lindor + Caja Floral',
+        brand: 'Lindt & Atelier',
+        category: 'Dúos Regalo',
+        price: 1690,
+        featured: true,
+        imported: true,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=800&q=80',
+        description: 'Sombrerera con rosas rosadas y eucalipto acompañada de trufas suizas Lindt Lindor surtidas.'
+      },
+      {
+        id: 'CH-102',
+        name: 'Caja Trufas Suizas Lindor Assorted (200g)',
+        brand: 'Lindt',
+        category: 'Chocolates',
+        price: 540,
+        featured: false,
+        imported: true,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=800&q=80',
+        description: 'Bombones suizos de cobertura delicada y relleno cremoso fundente en sabores leche, amargo y avellana.'
+      },
+      {
+        id: 'FL-202',
+        name: 'Arreglo Primaveral Girasoles & Liliums',
+        brand: 'Atelier Floral',
+        category: 'Arreglos Florales',
+        price: 980,
+        featured: false,
+        imported: false,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80',
+        description: 'Combinación luminosa de girasoles frescos, liliums perfumados y follaje verde en base artesanal.'
+      },
+      {
+        id: 'CH-103',
+        name: 'Estuche Pralinés Belgas Guylian Sea Shells',
+        brand: 'Guylian',
+        category: 'Chocolates',
+        price: 620,
+        featured: false,
+        imported: true,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80',
+        description: 'Auténtico chocolate belga marmoleado relleno de praliné artesanal de avellanas tostadas.'
+      },
+      {
+        id: 'FL-203',
+        name: 'Sombrerera Minimalista Rosas Pastel & Gypsophila',
+        brand: 'Atelier Floral',
+        category: 'Arreglos Florales',
+        price: 1120,
+        featured: false,
+        imported: false,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=80',
+        description: 'Diseño moderno en tonos suaves ideal para cumpleaños, nacimientos o agradecimientos especiales.'
+      },
+      {
+        id: 'CH-104',
+        name: 'Colección Cacao Oscuro 70% Godiva Masterpieces',
+        brand: 'Godiva',
+        category: 'Chocolates',
+        price: 750,
+        featured: false,
+        imported: true,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1542843137-8791a6904d14?auto=format&fit=crop&w=800&q=80',
+        description: 'Tabletas individuales de cacao intenso con ganache aterciopelado para amantes del chocolate fino.'
+      },
+      {
+        id: 'DU-302',
+        name: 'Box Celebración: 12 Rosas + Ferrero & Tarjeta',
+        brand: 'Ferrero & Atelier',
+        category: 'Dúos Regalo',
+        price: 1450,
+        featured: false,
+        imported: true,
+        available: true,
+        image: 'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80',
+        description: 'Caja rígida de presentación doble con una docena de rosas frescas y estuche Ferrero Rocher.'
+      }
+    ];
+
+    // 3. ESTADO DE LA APLICACIÓN
+    let cart = loadCartFromStorage();
+
+    // Formateador de moneda en Lempiras (Honduras)
+    function formatCurrency(amount) {
+      return 'L ' + amount.toLocaleString('es-HN', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    // 4. PERSISTENCIA EN LOCALSTORAGE
+    function loadCartFromStorage() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : [];
+      } catch (e) {
+        console.warn('No se pudo leer localStorage:', e);
+        return [];
+      }
+    }
+
+    function saveCartToStorage() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      } catch (e) {
+        console.warn('No se pudo guardar en localStorage:', e);
+      }
+    }
+
+    // 5. RENDERIZADO DE TARJETAS DE PRODUCTO
+    function createProductCardHTML(product) {
+      return `
+        <article class="product-card">
+          <div class="product-media">
+            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+            <div class="badge-stack">
+              ${product.available ? '<span class="badge badge-available">● Disponible</span>' : ''}
+              ${product.imported ? '<span class="badge badge-imported">✈ Importado</span>' : '<span class="badge badge-imported">🌿 Fresco del día</span>'}
+            </div>
+            <span class="badge-code">Cód: ${product.id}</span>
+          </div>
+          <div class="product-body">
+            <span class="product-brand">${product.brand} · ${product.category}</span>
+            <h3 class="product-title">${product.name}</h3>
+            <p class="product-desc">${product.description}</p>
+            <div class="product-footer">
+              <div class="product-price">
+                ${formatCurrency(product.price)}
+                <small>Precio referencial</small>
+              </div>
+              <button 
+                type="button" 
+                class="btn-add" 
+                onclick="addToCart('${product.id}', this)"
+                aria-label="Agregar ${product.name} al carrito"
+              >
+                + Agregar
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderFeatured() {
+      const container = document.getElementById('featuredGrid');
+      const featuredItems = PRODUCTS.filter(p => p.featured);
+      container.innerHTML = featuredItems.map(createProductCardHTML).join('');
+    }
+
+    function populateBrandFilter() {
+      const brandSelect = document.getElementById('brandFilter');
+      const uniqueBrands = [...new Set(PRODUCTS.map(p => p.brand))];
+      uniqueBrands.forEach(brand => {
+        const option = document.createElement('option');
+        option.value = brand;
+        option.textContent = brand;
+        brandSelect.appendChild(option);
+      });
+    }
+
+    function filterAndRenderCatalog() {
+      const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+      const categoryVal = document.getElementById('categoryFilter').value;
+      const brandVal = document.getElementById('brandFilter').value;
+      const priceVal = document.getElementById('priceFilter').value;
+
+      const filtered = PRODUCTS.filter(product => {
+        const matchesSearch =
+          product.name.toLowerCase().includes(searchTerm) ||
+          product.brand.toLowerCase().includes(searchTerm) ||
+          product.description.toLowerCase().includes(searchTerm) ||
+          product.id.toLowerCase().includes(searchTerm);
+
+        const matchesCategory = categoryVal === 'all' || product.category === categoryVal;
+        const matchesBrand = brandVal === 'all' || product.brand === brandVal;
+
+        let matchesPrice = true;
+        if (priceVal !== 'all') {
+          const [min, max] = priceVal.split('-').map(Number);
+          matchesPrice = product.price >= min && product.price <= max;
+        }
+
+        return matchesSearch && matchesCategory && matchesBrand && matchesPrice;
+      });
+
+      const catalogGrid = document.getElementById('catalogGrid');
+      const resultsCount = document.getElementById('resultsCount');
+
+      if (filtered.length === 0) {
+        catalogGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; background: var(--surface); border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">No encontramos productos con esos filtros</p>
+            <p style="color: var(--cacao-600); font-size: 0.92rem; margin-bottom: 1.25rem;">Intenta ampliar el rango de precio o contáctanos por WhatsApp para armar un arreglo a medida.</p>
+            <button type="button" class="btn btn-primary" onclick="resetFilters()">Ver todo el catálogo</button>
+          </div>
+        `;
+        resultsCount.textContent = '0 resultados encontrados';
+      } else {
+        catalogGrid.innerHTML = filtered.map(createProductCardHTML).join('');
+        resultsCount.textContent = `Mostrando ${filtered.length} de ${PRODUCTS.length} opciones disponibles`;
+      }
+    }
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('categoryFilter').value = 'all';
+      document.getElementById('brandFilter').value = 'all';
+      document.getElementById('priceFilter').value = 'all';
+      filterAndRenderCatalog();
+    }
+
+    // 6. GESTIÓN DEL CARRITO (AGREGAR, ACTUALIZAR CANTIDAD, ELIMINAR)
+    function addToCart(productId, buttonEl) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const existing = cart.find(item => item.id === productId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+
+      // Feedback visual en el botón
+      if (buttonEl) {
+        const originalText = buttonEl.innerHTML;
+        buttonEl.classList.add('added');
+        buttonEl.innerHTML = '✓ Agregado';
+        setTimeout(() => {
+          buttonEl.classList.remove('added');
+          buttonEl.innerHTML = originalText;
+        }, 950);
+      }
+
+      // Animación en badge del header
+      const badge = document.getElementById('navCartCount');
+      badge.classList.add('bump');
+      setTimeout(() => badge.classList.remove('bump'), 250);
+
+      showToast(`🛍️ "${product.name}" agregado a tu selección`);
+    }
+
+    function changeQty(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(i => i.id !== productId);
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById('navCartCount').textContent = totalItems;
+
+      const container = document.getElementById('cartItemsContainer');
+      const footer = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        footer.style.display = 'none';
+        container.innerHTML = `
+          <div class="cart-empty">
+            <div class="cart-empty-icon">🍫💐</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Tu carrito está vacío</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Explora nuestros chocolates importados y arreglos florales para armar tu regalo ideal.</p>
+            <button type="button" class="btn btn-primary" onclick="closeCartDrawer(); location.href='#catalogo';">
+              Explorar catálogo
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      footer.style.display = 'block';
+      container.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="cart-item-info">
+            <div class="cart-item-brand">${item.brand} · Cód: ${item.id}</div>
+            <div class="cart-item-title" title="${item.name}">${item.name}</div>
+            <div class="cart-item-price">${formatCurrency(item.price)} c/u</div>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <div class="qty-controls">
+                <button type="button" class="qty-btn" onclick="changeQty('${item.id}', -1)" aria-label="Disminuir cantidad">−</button>
+                <span class="qty-val">${item.qty}</span>
+                <button type="button" class="qty-btn" onclick="changeQty('${item.id}', 1)" aria-label="Aumentar cantidad">+</button>
+              </div>
+              <button type="button" class="remove-item" onclick="removeFromCart('${item.id}')">Quitar</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      document.getElementById('cartSubtotal').textContent = formatCurrency(subtotal);
+      document.getElementById('cartTotal').textContent = formatCurrency(subtotal);
+    }
+
+    // 7. FLUJO PRINCIPAL DE CHECKOUT SIN PASARELA -> WHATSAPP URL-ENCODED
+    function finalizeOrderViaWhatsApp() {
+      if (cart.length === 0) return;
+
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const cardMessage = document.getElementById('cardDeduction').value.trim();
+
+      let lines = [
+        'Hola 😊 Me interesa cotizar, reservar y conocer disponibilidad de estos chocolates y arreglos florales que vi en su web Cacao & Pétalo:',
+        '',
+        '*Detalle de mi selección:*'
+      ];
+
+      cart.forEach((item, index) => {
+        const lineTotal = item.price * item.qty;
+        lines.push(
+          `${index + 1}. *${item.name}* (${item.brand}) — Cód: ${item.id} | Cant: ${item.qty} x ${formatCurrency(item.price)} = *${formatCurrency(lineTotal)}*`
+        );
+      });
+
+      lines.push('');
+      lines.push(`*Total referencial:* ${formatCurrency(subtotal)}`);
+
+      if (cardMessage) {
+        lines.push(`*Nota para tarjeta dedicatoria:* "${cardMessage}"`);
+      }
+
+      lines.push('');
+      lines.push('¿Me confirmas disponibilidad, costo de envío y próximos pasos para coordinar por llamada o chat?');
+
+      const fullMessage = lines.join('\n');
+      const encodedText = encodeURIComponent(fullMessage);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    // 8. FORMULARIO DE CONTACTO -> REDIRECCIÓN AMIGABLE A WHATSAPP
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const city = document.getElementById('contactCity').value;
+      const occasion = document.getElementById('contactOccasion').value;
+      const message = document.getElementById('contactMessage').value.trim();
+
+      const text = [
+        `Hola 😊 Soy *${name}* y les escribo desde su página web.`,
+        `• *Ciudad de entrega:* ${city}`,
+        `• *Ocasión:* ${occasion}`,
+        `• *Consulta:* ${message}`,
+        '',
+        '¿Podrían brindarme asesoría y disponibilidad para coordinar mi pedido?'
+      ].join('\n');
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+
+    // 9. CONTROLES DE INTERFAZ (DRAWER, MENÚ MÓVIL, TOAST)
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartOverlay = document.getElementById('cartOverlay');
+
+    function openCartDrawer() {
+      cartDrawer.classList.add('open');
+      cartOverlay.classList.add('open');
+      cartDrawer.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeCartDrawer() {
+      cartDrawer.classList.remove('open');
+      cartOverlay.classList.remove('open');
+      cartDrawer.setAttribute('aria-hidden', 'true');
+    }
+
+    function closeMobileMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
+    // 10. EVENT LISTENERS E INICIALIZACIÓN
+    document.getElementById('openCartBtn').addEventListener('click', openCartDrawer);
+    document.getElementById('closeCartBtn').addEventListener('click', closeCartDrawer);
+    cartOverlay.addEventListener('click', closeCartDrawer);
+
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    document.getElementById('searchInput').addEventListener('input', filterAndRenderCatalog);
+    document.getElementById('categoryFilter').addEventListener('change', filterAndRenderCatalog);
+    document.getElementById('brandFilter').addEventListener('change', filterAndRenderCatalog);
+    document.getElementById('priceFilter').addEventListener('change', filterAndRenderCatalog);
+    document.getElementById('resetFiltersBtn').addEventListener('click', resetFilters);
+    document.getElementById('checkoutWhatsappBtn').addEventListener('click', finalizeOrderViaWhatsApp);
+
+    // Cerrar carrito con tecla Escape para accesibilidad
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && cartDrawer.classList.contains('open')) {
+        closeCartDrawer();
+      }
+    });
+
+    // Inicializar vista al cargar
+    document.addEventListener('DOMContentLoaded', () => {
+      populateBrandFilter();
+      renderFeatured();
+      filterAndRenderCatalog();
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>
